@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mor_trip_mate/theme/app_colors.dart';
+import 'package:mor_trip_mate/theme/button_theme.dart';
 
 class AppTheme {
   static ThemeData lightTheme = ThemeData(
@@ -9,7 +10,18 @@ class AppTheme {
     scaffoldBackgroundColor: AppColors.scafoldBackground,
     primaryColor: Colors.blue,
     textTheme: AppTextTheme.lightTextTheme,
-    // elevatedButtonTheme: AppElevatedButtonTheme.elevatedButtonThemeLight,
+    elevatedButtonTheme: AppElevatedButtonTheme.elevatedButtonThemeLight,
+    outlinedButtonTheme: AppOutlinedButtonTheme.outlinedButtonThemeLight,
+  );
+  static ThemeData darkTheme = ThemeData(
+    useMaterial3: true,
+    fontFamily: 'Raleway',
+    brightness: Brightness.dark,
+    scaffoldBackgroundColor: AppColors.scafoldBackgroundDark,
+    primaryColor: Colors.blue,
+    textTheme: AppTextTheme.darkTextTheme,
+    elevatedButtonTheme: AppElevatedButtonTheme.elevatedButtonThemeDark,
+    outlinedButtonTheme: AppOutlinedButtonTheme.outlinedButtonThemeDark,
   );
 }
 
@@ -26,28 +38,6 @@ class AppTextTheme {
       color: Colors.black87,
     ),
   );
-}
 
-class AppElevatedButtonTheme {
-  static ElevatedButtonThemeData elevatedButtonThemeLight =
-      ElevatedButtonThemeData(
-        style: ElevatedButton.styleFrom(
-          elevation: 2,
-          foregroundColor: Colors.black,
-          shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(12),
-          ),
-        ),
-      );
-
-  static ElevatedButtonThemeData elevatedButtonThemeDark =
-      ElevatedButtonThemeData(
-        style: ElevatedButton.styleFrom(
-          elevation: 2,
-          foregroundColor: Colors.white,
-          shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(12),
-          ),
-        ),
-      );
+  static TextTheme darkTextTheme = TextTheme();
 }
