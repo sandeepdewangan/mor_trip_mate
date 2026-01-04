@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mor_trip_mate/pages/auth/login/login_page.dart';
 import 'package:mor_trip_mate/pages/welcome/welcome_page.dart';
 import 'package:mor_trip_mate/theme/app_theme.dart';
 
@@ -16,7 +17,7 @@ class MyApp extends StatelessWidget {
       title: 'Mor Trip Mate',
       themeMode: ThemeMode.light,
       theme: AppTheme.lightTheme,
-      home: WelcomePage(),
+      home: LoginPage(),
     );
   }
 }

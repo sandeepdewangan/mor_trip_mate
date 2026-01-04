@@ -12,6 +12,10 @@ class AppTheme {
     textTheme: AppTextTheme.lightTextTheme,
     elevatedButtonTheme: AppElevatedButtonTheme.elevatedButtonThemeLight,
     outlinedButtonTheme: AppOutlinedButtonTheme.outlinedButtonThemeLight,
+    // Sets the global focus color for borders, labels, and icons when focused.
+    colorScheme: ColorScheme.fromSeed(
+      seedColor: AppColors.primaryColor,
+    ),
   );
   static ThemeData darkTheme = ThemeData(
     useMaterial3: true,

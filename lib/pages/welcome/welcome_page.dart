@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:mor_trip_mate/constants/app_constants.dart';
+import 'package:mor_trip_mate/constants/assets_constants.dart';
 
 class WelcomePage extends StatefulWidget {
   const WelcomePage({super.key});
@@ -23,7 +23,7 @@ class _WelcomePageState extends State<WelcomePage> {
               children: [
                 SizedBox(
                   height: MediaQuery.of(context).size.height * 0.50,
-                  child: Image.asset(AppConstants.logo),
+                  child: Image.asset(AssetsConstants.logo),
                 ),
                 const Spacer(),
                 Row(
