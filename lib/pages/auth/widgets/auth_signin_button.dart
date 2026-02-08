@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:mor_trip_mate/core/utils.dart';
+import 'package:mor_trip_mate/core/utils/utils.dart';
 
 class AuthSigninButton extends StatelessWidget {
   const AuthSigninButton({

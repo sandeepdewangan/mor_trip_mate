@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:mor_trip_mate/constants/assets_constants.dart';
+import 'package:mor_trip_mate/core/constants/app_constants.dart';
+import 'package:mor_trip_mate/core/constants/assets_constants.dart';
+import 'package:mor_trip_mate/core/utils/utils.dart';
 
 class WelcomePage extends StatefulWidget {
   const WelcomePage({super.key});
@@ -13,7 +15,7 @@ class _WelcomePageState extends State<WelcomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Padding(
-        padding: const EdgeInsets.all(15.0),
+        padding: const EdgeInsets.all(AppConstants.screenPadding),
         child: SafeArea(
           minimum: EdgeInsets.only(top: 50, bottom: 50),
           child: Center(
@@ -22,8 +24,11 @@ class _WelcomePageState extends State<WelcomePage> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 SizedBox(
-                  height: MediaQuery.of(context).size.height * 0.50,
-                  child: Image.asset(AssetsConstants.logo),
+                  height: getScreenHeight(context) * 0.50,
+                  child: Image.asset(
+                    AssetsConstants.logo,
+                    width: getScreenWidth(context) * 0.90,
+                  ),
                 ),
                 const Spacer(),
                 Row(
